@@ -1,0 +1,25 @@
+body{
+    background-size: cover;
+    background-position: center;
+}
+
+.heading{
+    width: 100%;
+    margin: 0;
+    font-size: 23px;
+}
+
+#start, #num_of_obj, #status{
+    font-size: 18px;
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    font-size: 15px;
+    color: black;
+    background-color: rgb(168, 168, 168);
+    line-height: 2;
+    width: 100%;
+    text-align: center;
+}
