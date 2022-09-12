@@ -9,6 +9,24 @@ body{
     font-size: 23px;
 }
 
+canvas{
+    margin-top: 112px;
+}
+
+#obj_name{
+    margin-top: 20px;
+    width: 300px;
+}
+
+.note{
+    font-size: 18px;
+}
+
+#name_title{
+    font-size: 18px;
+    color: white;
+}
+
 #start, #num_of_obj, #status{
     font-size: 18px;
 }

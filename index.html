@@ -1,7 +1,7 @@
 <html>
 <head>
 
-	<title>AI Video Surveillance</title>
+  <title>AI Video Surveillance</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -14,17 +14,20 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
-<body background="background.jpg">
+<body background="background.png">
 <center>
-  <h1 class="btn btn-warning heading">AI Video Surveillance</h1>
+  <h1 class="btn btn-warning heading">AI Video Surveillance
+    <br>
+    <label class="note">The model will only detect the object if the name matches the names in CoCoSSD.</label>
+  </h1>
+  <br>
+  <h3 class="btn" id="name_title"><b>Object Name:</b></h3>
+  <input class="btn" type="text" id="obj_name" placeholder="Name of the object">
   <br>
   <br>
   <button id="start" onclick="start()" class="btn btn-success">START</button>
   <br>
-  <br>
-  <h3 id="num_of_obj" class="btn btn-primary"></h3>
-  <br>
-  <br>
+  <h3 id="object_status" class="btn btn-warning">22</h3>
   <h3 id="status" class="btn btn-danger"></h3>
 </center>
 
