@@ -1,6 +1,9 @@
 objects = [];
 status = "";
 
+var SpeechRecognition = window.webkitSpeechRecognition;
+var recognition = new SpeechRecognition();
+
 function setup(){
     canvas = createCanvas(400, 300);
     canvas.center();
@@ -35,18 +38,20 @@ function draw(){
             stroke("red");
             fill("red");
             percent = floor(objects[i].confidence * 100);
-            text = objects[i].label;
             noFill();
             text(objects[i].label + " " + percent + "%", objects[i].x + 15, objects[i].y + 15);
             rect(objects[i].x, objects[i].y, objects[i].width, objects[i].height);
+            document.getElementById("status").innerHTML = "Objects Detected";
 
             if(objects[i].label == obj_name){
                 video.stop();
                 objectDetector.detect(gotResult);
                 document.getElementById("object_status").innerHTML = obj_name + " Found";
-                var SpeechRecognition = window.webkitSpeechRecognition;
-                var recognition = new SpeechRecognition();
-                SpeechSynthesisUtterance(obj_name + " found");
+                var utterThis = new SpeechSynthesisUtterance(obj_name + " found");
+                synth.speak(utterThis);
+            }
+            else{
+                document.getElementById("object_status").innerHTML = obj_name + " Not Found";
             }
         }
     }
